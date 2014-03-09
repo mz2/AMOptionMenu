@@ -207,7 +207,7 @@ NSString* const kAMOptionMenuContentDidChange = @"kAMOptionMenuDataDidChange";
 {
 	if( [self allowUnkownOptions] || [_valuesDict objectForKey:key] )
 	{
-		NSLog( @"settingValue:%@ forKey:%@", value, key );
+		//NSLog( @"settingValue:%@ forKey:%@", value, key );
 		[self willChangeValueForKey:@"summaryString"];
 		[_stateDict setObject:value forKey:key];
 		[self didChangeValueForKey:@"summaryString"];
@@ -230,12 +230,12 @@ NSString* const kAMOptionMenuContentDidChange = @"kAMOptionMenuDataDidChange";
 		{
 			if( [[_stateDict objectForKey:groupKey] isEqual:optionKey] )
 			{
-				NSLog( @"valueForKeyPath:%@ is YES", keyPath );
+				//NSLog( @"valueForKeyPath:%@ is YES", keyPath );
 				return [NSNumber numberWithBool:YES];
 			}
 			else
 			{
-				NSLog( @"valueForKeyPath:%@ is NO", keyPath );
+				//NSLog( @"valueForKeyPath:%@ is NO", keyPath );
 				return [NSNumber numberWithBool:NO];
 			}
 		}
