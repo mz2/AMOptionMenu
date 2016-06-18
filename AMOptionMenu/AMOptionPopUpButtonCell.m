@@ -64,7 +64,12 @@
 
 - (id) initTextCell:(NSString*)stringValue pullsDown:(BOOL)pullDown
 {
-	return [self init];
+    self = [super initTextCell:stringValue pullsDown:pullDown];
+    if( self )
+    {
+        [self configure];
+    }
+    return self;
 }
 
 
